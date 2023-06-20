@@ -8,7 +8,7 @@ level = "DEBUG"
 name = "monopoly"
 user = "mp_client"
 password = "mp_password"
-host = "172.23.0.1"
+host = "172.28.0.1"
 port = 5432
 
 [LobbyRestrictions]

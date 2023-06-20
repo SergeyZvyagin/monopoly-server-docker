@@ -2,7 +2,7 @@ version: '2.4'
 
 services:
     mp_db: 
-        build: monopoly-db-scheme
+        build: sources/monopoly-db-scheme
         restart: on-failure
         user: 1000:1000
         networks:
@@ -10,7 +10,7 @@ services:
                 ipv4_address: 172.28.0.1
                 
     mp_api_gw:
-        build: monopoly-api-gateway
+        build: sources/monopoly-api-gateway
         restart: on-failure
         user: 1000:1000
         volumes:
@@ -19,8 +19,18 @@ services:
             monopoly_network:
                 ipv4_address: 172.28.0.2
                 
+    mp_users:
+        build: sources/monopoly-users-service
+        restart: on-failure
+        user: 1000:1000
+        volumes_from:
+            - mp_api_gw
+        networks:
+            monopoly_network:
+                ipv4_address: 172.28.0.3
+                
     mp_lobbies:
-        build: monopoly-api-gateway
+        build: sources/monopoly-lobbies-service
         restart: on-failure
         user: 1000:1000
         volumes_from:

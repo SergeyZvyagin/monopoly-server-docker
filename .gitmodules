@@ -1,0 +1,12 @@
+[submodule "sources/monopoly-db-scheme"]
+	path = sources/monopoly-db-scheme
+	url = git@github.com:SergeyZvyagin/monopoly-db-scheme.git
+[submodule "sources/monopoly-api-gateway"]
+	path = sources/monopoly-api-gateway
+	url = git@github.com:SergeyZvyagin/monopoly-api-gateway.git
+[submodule "sources/monopoly-lobbies-service"]
+	path = sources/monopoly-lobbies-service
+	url = git@github.com:SergeyZvyagin/monopoly-lobbies-service.git
+[submodule "sources/monopoly-users-service"]
+	path = sources/monopoly-users-service
+	url = git@github.com:SergeyZvyagin/monopoly-users-service.git

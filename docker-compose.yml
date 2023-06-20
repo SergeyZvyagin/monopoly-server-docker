@@ -23,8 +23,8 @@ services:
         build: sources/monopoly-users-service
         restart: on-failure
         user: 1000:1000
-        volumes_from:
-            - mp_api_gw
+        volumes:
+            - ./configuration:/app/configuration
         networks:
             monopoly_network:
                 ipv4_address: 172.28.0.3
@@ -34,7 +34,7 @@ services:
         restart: on-failure
         user: 1000:1000
         volumes_from:
-            - mp_api_gw
+            - mp_users
         networks:
             monopoly_network:
                 ipv4_address: 172.28.0.4

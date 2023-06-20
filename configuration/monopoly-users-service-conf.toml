@@ -1,0 +1,24 @@
+[gRPC]
+port = 1628
+
+[Logging]
+level = "DEBUG"
+
+[Token]
+algorithm = "HS256"
+secret = "secret"
+accessTokenDuringLife = 5 
+refreshTokenDuringLife = 30
+
+[AuthFromVK]
+getAccessTokenBaseURL = "https://oauth.vk.com/access_token"
+clientID = "51617193"
+clientSecret = "qcMGl6WBRRX22We0doNX"
+redirectURI = "http://127.0.0.1:6543/verifyVK"
+
+[DataBase]
+name = "monopoly"
+user = "mp_client"
+password = "mp_password"
+host = "172.23.0.1"
+port = 5432

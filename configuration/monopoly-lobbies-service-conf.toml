@@ -1,0 +1,22 @@
+[gRPC]
+port = 2816
+
+[Logging]
+level = "DEBUG"
+
+[DataBase]
+name = "monopoly"
+user = "mp_client"
+password = "mp_password"
+host = "172.23.0.1"
+port = 5432
+
+[LobbyRestrictions]
+minMaxPlayers = 2
+maxMaxPlayers = 6
+minTimeForTurn = 5
+maxTimeForTurn = 20
+minScoreVictoryValue = 800
+maxScoreVictoryValue = 20000
+minTurnVictoryValue = 24
+maxTurnVictoryValue = 128

@@ -1,0 +1,19 @@
+[HTTP]
+port = 6543
+isSecure = false
+
+[HTTP.Secure]
+certificate = "/etc/letsencrypt/live/ppcd.fun/fullchain.pem"
+publicKey = "/etc/letsencrypt/live/ppcd.fun/privkey.pem"
+
+[GRPC.ConnectToUsersMicroservice]
+address = "172.23.0.3"
+port = 1628
+
+[GRPC.ConnectToLobbiesMicroservice]
+address = "172.23.0.4"
+port = 2816
+
+[Tokens]
+algorithm = "HS256"
+secret = "secret"

@@ -1,0 +1,44 @@
+[Logging]
+level = "INFO"
+path = "/dev/stdout"
+
+[gRPC]
+address = ""
+port = 2411
+
+[gRPC.ConnectToLobbiesMicroservice]
+address = "172.28.0.5"
+port = 2816
+
+[GameParams]
+sabotageImpactMultiplier = 0.9 
+
+[GameParams.Map]
+# sum must be 39
+commonsInTotal = 10
+sawmillsInTotal = 8
+coalStationsInTotal = 4
+atomicStationsInTotal = 3
+forestsInTotal = 3
+coalInTotal = 3
+uraniumInTotal = 3
+vacationsInTotal = 2
+sabotagesInTotal = 3
+
+[GameParams.Economy]
+startingBalance = 200
+
+[GameParams.Economy.BaseCosts]
+sawmill	= 50 
+coalStation = 150
+atomicStation = 350
+forest = 100
+coal = 250
+uranium = 500
+sabotage = 150
+arrow = 25
+
+[GameParams.Economy.BaseIncomes]
+sawmill	= 5
+coalStation = 20
+atomicStation = 50

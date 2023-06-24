@@ -7,7 +7,7 @@ services:
         user: 1000:1000
         networks:
             monopoly_network:
-                ipv4_address: 172.28.0.1
+                ipv4_address: 172.28.0.2
                 
     mp_api_gw:
         build: sources/monopoly-api-gateway
@@ -17,7 +17,7 @@ services:
             - ./configuration:/configuration
         networks:
             monopoly_network:
-                ipv4_address: 172.28.0.2
+                ipv4_address: 172.28.0.3
                 
     mp_users:
         build: sources/monopoly-users-service
@@ -27,7 +27,7 @@ services:
             - ./configuration:/app/configuration
         networks:
             monopoly_network:
-                ipv4_address: 172.28.0.3
+                ipv4_address: 172.28.0.4
                 
     mp_lobbies:
         build: sources/monopoly-lobbies-service
@@ -37,7 +37,17 @@ services:
             - mp_users
         networks:
             monopoly_network:
-                ipv4_address: 172.28.0.4
+                ipv4_address: 172.28.0.5
+                
+    mp_game:
+        build: sources/monopoly-game-service
+        restart: on-failure
+        user: 1000:1000
+        volumes_from:
+            - mp_users
+        networks:
+            monopoly_network:
+                ipv4_address: 172.28.0.6
                 
 networks:
     monopoly_network:

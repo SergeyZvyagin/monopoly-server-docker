@@ -1,6 +1,10 @@
 [gRPC]
 port = 2816
 
+[gRPC.ConnectToGameMicroservice.address]
+address = "172.28.0.6"
+port = 2411
+
 [Logging]
 level = "DEBUG"
 
@@ -8,7 +12,7 @@ level = "DEBUG"
 name = "monopoly"
 user = "mp_client"
 password = "mp_password"
-host = "172.28.0.1"
+host = "172.28.0.2"
 port = 5432
 
 [LobbyRestrictions]

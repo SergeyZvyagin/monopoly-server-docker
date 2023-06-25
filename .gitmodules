@@ -10,3 +10,6 @@
 [submodule "sources/monopoly-users-service"]
 	path = sources/monopoly-users-service
 	url = git@github.com:SergeyZvyagin/monopoly-users-service.git
+[submodule "sources/monopoly-game-service"]
+	path = sources/monopoly-game-service
+	url = git@github.com:SergeyZvyagin/monopoly-game-service.git
